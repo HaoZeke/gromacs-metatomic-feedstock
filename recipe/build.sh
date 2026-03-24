@@ -49,8 +49,11 @@ for simdflavor in "${simdflavors[@]}" ; do
     -DCMAKE_EXE_LINKER_FLAGS="$LDFLAGS"
     -DGMX_METATOMIC=AUTO
   )
-  # OpenCL header on Mac is not recognized by GROMACS
-  if [[ "$(uname)" != 'Darwin' && "${double}" == "no" ]] ; then
+  # OpenCL GPU support: only for nompi builds.
+  # The MPI+OpenCL combination segfaults on systems without OpenCL devices
+  # (e.g. CI runners), so we disable it for MPI variants.  CUDA MPI builds
+  # override this with GMX_GPU=CUDA below.
+  if [[ "$(uname)" != 'Darwin' && "${double}" == "no" && "${mpi}" == "nompi" ]] ; then
       cmake_args+=(-DGMX_GPU=OpenCL)
   fi
   if [[ "${mpi}" == "nompi" ]]; then
