@@ -1,7 +1,7 @@
-{% set git_rev = "f020d11dee417b3217ee61d8e46ac48b18d6e785" %}
+{% set git_rev = "16ba984be0ecbaf200e995696290cb055cb30c24" %}
 # increase this by 1 everytime you change the git commit above without also
 # changing the `version`
-{% set git_rev_count = "2" %}
+{% set git_rev_count = "3" %}
 
 {% set name = "gromacs-metatomic" %}
 {% set conda_version = "2026.0" %}
@@ -70,7 +70,7 @@ requirements:
     - libhwloc 2.*
     - fftw
     - {{ mpi }}  # [mpi != 'nompi']
-    - libmetatomic-torch >=0.1.5,<0.2.0
+    - libmetatomic-torch >=0.1.12rc1,<0.1.12
     # always build against the CPU version of libtorch, we can still pick the
     # cuda one at runtime
     - libtorch * cpu*
@@ -85,9 +85,9 @@ requirements:
     - libhwloc 2.*
     - {{ mpi }}  # [mpi != 'nompi']
     - __cuda  # [not osx and cuda_compiler_version != "None"]
-    - libmetatomic-torch >=0.1.7,<0.2.0
-    - libmetatensor-torch >=0.8.2,<0.9.0
-    - libmetatensor >=0.1.19,<0.2.0
+    - libmetatomic-torch >=0.1.12rc1,<0.1.12
+    - libmetatensor-torch >=0.9.0rc5,<0.9.0
+    - libmetatensor >=0.2.0rc3,<0.2.0
 
 test:
   commands:
