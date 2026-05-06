@@ -1,5 +1,4 @@
 diff --git a/cmake/gmxManageMetatomic.cmake b/cmake/gmxManageMetatomic.cmake
-index 0000000..0000000 100644
 --- a/cmake/gmxManageMetatomic.cmake
 +++ b/cmake/gmxManageMetatomic.cmake
 @@ -121,14 +121,14 @@ if (GMX_METATOMIC)
