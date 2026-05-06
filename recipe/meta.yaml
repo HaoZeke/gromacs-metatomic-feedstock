@@ -9,7 +9,7 @@
 # Use a higher build number for preferred variants, to ensure that they are
 # picked first by conda's solver, and installed where the platform supports it.
 # Prefer: CUDA > non-CUDA, MPI > nompi, single > double
-{% set build = 0 %}
+{% set build = 1 %}
 {% set build = build + 100 %}  # [double == 'no' and cuda_compiler_version != "None"]
 {% set build = build + 50 %}   # [mpi != 'nompi']
 
