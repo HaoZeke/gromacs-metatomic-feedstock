@@ -48,6 +48,8 @@ for simdflavor in "${simdflavors[@]}" ; do
     -DGMX_USE_RDTSCP=OFF
     -DCMAKE_EXE_LINKER_FLAGS="$LDFLAGS"
     -DGMX_METATOMIC=AUTO
+    -DDOWNLOAD_METATENSOR=OFF
+    -DDOWNLOAD_METATOMIC=OFF
   )
   # OpenCL GPU support: only for nompi builds.
   # The MPI+OpenCL combination segfaults on systems without OpenCL devices
