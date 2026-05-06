@@ -19,364 +19,429 @@ jobs:
     timeout-minutes: 1080
     strategy:
       fail-fast: false
+      max-parallel: 50
       matrix:
         include:
           - CONFIG: linux_64_cuda_compiler_version12.9doublenompinompipython3.10.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: linux_64_cuda_compiler_version12.9double_hb984c4b6
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-latest']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma8
           - CONFIG: linux_64_cuda_compiler_version12.9doublenompinompipython3.11.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: linux_64_cuda_compiler_version12.9double_h0efa9a7b
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-latest']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma8
           - CONFIG: linux_64_cuda_compiler_version12.9doublenompinompipython3.12.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: linux_64_cuda_compiler_version12.9double_h77b256be
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-latest']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma8
           - CONFIG: linux_64_cuda_compiler_version12.9doublenompinompipython3.13.____cp313
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: linux_64_cuda_compiler_version12.9double_h123a914c
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-latest']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma8
           - CONFIG: linux_64_cuda_compiler_version12.9doublenompiopenmpipython3.10.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: linux_64_cuda_compiler_version12.9double_hb257b711
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-latest']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma8
           - CONFIG: linux_64_cuda_compiler_version12.9doublenompiopenmpipython3.11.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: linux_64_cuda_compiler_version12.9double_h78a6ca14
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-latest']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma8
           - CONFIG: linux_64_cuda_compiler_version12.9doublenompiopenmpipython3.12.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: linux_64_cuda_compiler_version12.9double_h23d3a754
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-latest']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma8
           - CONFIG: linux_64_cuda_compiler_version12.9doublenompiopenmpipython3.13.____cp313
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: linux_64_cuda_compiler_version12.9double_haf755ff9
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-latest']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma8
           - CONFIG: linux_64_cuda_compiler_versionNonedoublenompinompipython3.10.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: linux_64_cuda_compiler_versionNonedouble_h1a225333
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-latest']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma8
           - CONFIG: linux_64_cuda_compiler_versionNonedoublenompinompipython3.11.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: linux_64_cuda_compiler_versionNonedouble_hbfd3d0d9
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-latest']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma8
           - CONFIG: linux_64_cuda_compiler_versionNonedoublenompinompipython3.12.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: linux_64_cuda_compiler_versionNonedouble_h5250c0c9
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-latest']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma8
           - CONFIG: linux_64_cuda_compiler_versionNonedoublenompinompipython3.13.____cp313
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: linux_64_cuda_compiler_versionNonedouble_h392a1ca2
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-latest']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma8
           - CONFIG: linux_64_cuda_compiler_versionNonedoublenompiopenmpipython3.10.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: linux_64_cuda_compiler_versionNonedouble_h7d6b8bb1
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-latest']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma8
           - CONFIG: linux_64_cuda_compiler_versionNonedoublenompiopenmpipython3.11.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: linux_64_cuda_compiler_versionNonedouble_hea9f7128
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-latest']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma8
           - CONFIG: linux_64_cuda_compiler_versionNonedoublenompiopenmpipython3.12.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: linux_64_cuda_compiler_versionNonedouble_h6921a6ee
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-latest']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma8
           - CONFIG: linux_64_cuda_compiler_versionNonedoublenompiopenmpipython3.13.____cp313
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: linux_64_cuda_compiler_versionNonedouble_h852904bc
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-latest']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma8
           - CONFIG: linux_64_cuda_compiler_versionNonedoubleyesmpinompipython3.10.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: linux_64_cuda_compiler_versionNonedouble_h2f6f29ff
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-latest']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma8
           - CONFIG: linux_64_cuda_compiler_versionNonedoubleyesmpinompipython3.11.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: linux_64_cuda_compiler_versionNonedouble_h7440905d
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-latest']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma8
           - CONFIG: linux_64_cuda_compiler_versionNonedoubleyesmpinompipython3.12.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: linux_64_cuda_compiler_versionNonedouble_h9784d235
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-latest']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma8
           - CONFIG: linux_64_cuda_compiler_versionNonedoubleyesmpinompipython3.13.____cp313
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: linux_64_cuda_compiler_versionNonedouble_h82e2eec0
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-latest']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma8
           - CONFIG: linux_64_cuda_compiler_versionNonedoubleyesmpiopenmpipython3.10.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: linux_64_cuda_compiler_versionNonedouble_h34ec1766
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-latest']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma8
           - CONFIG: linux_64_cuda_compiler_versionNonedoubleyesmpiopenmpipython3.11.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: linux_64_cuda_compiler_versionNonedouble_h262af0f4
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-latest']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma8
           - CONFIG: linux_64_cuda_compiler_versionNonedoubleyesmpiopenmpipython3.12.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: linux_64_cuda_compiler_versionNonedouble_h8debc865
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-latest']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma8
           - CONFIG: linux_64_cuda_compiler_versionNonedoubleyesmpiopenmpipython3.13.____cp313
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: linux_64_cuda_compiler_versionNonedouble_h23a65e63
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-latest']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma8
           - CONFIG: linux_aarch64_cuda_compiler_versionNonedoublenompinompipython3.10.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: linux_aarch64_cuda_compiler_versionNoned_he6bb5b16
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-24.04-arm']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma8
           - CONFIG: linux_aarch64_cuda_compiler_versionNonedoublenompinompipython3.11.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: linux_aarch64_cuda_compiler_versionNoned_hed7cc4aa
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-24.04-arm']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma8
           - CONFIG: linux_aarch64_cuda_compiler_versionNonedoublenompinompipython3.12.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: linux_aarch64_cuda_compiler_versionNoned_h76b363bf
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-24.04-arm']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma8
           - CONFIG: linux_aarch64_cuda_compiler_versionNonedoublenompinompipython3.13.____cp313
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: linux_aarch64_cuda_compiler_versionNoned_h1f712233
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-24.04-arm']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma8
           - CONFIG: linux_aarch64_cuda_compiler_versionNonedoublenompiopenmpipython3.10.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: linux_aarch64_cuda_compiler_versionNoned_hd0418d59
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-24.04-arm']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma8
           - CONFIG: linux_aarch64_cuda_compiler_versionNonedoublenompiopenmpipython3.11.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: linux_aarch64_cuda_compiler_versionNoned_h75d030d0
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-24.04-arm']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma8
           - CONFIG: linux_aarch64_cuda_compiler_versionNonedoublenompiopenmpipython3.12.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: linux_aarch64_cuda_compiler_versionNoned_h6b5ff118
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-24.04-arm']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma8
           - CONFIG: linux_aarch64_cuda_compiler_versionNonedoublenompiopenmpipython3.13.____cp313
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: linux_aarch64_cuda_compiler_versionNoned_h90cb099f
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-24.04-arm']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma8
           - CONFIG: linux_aarch64_cuda_compiler_versionNonedoubleyesmpinompipython3.10.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: linux_aarch64_cuda_compiler_versionNoned_ha3c82179
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-24.04-arm']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma8
           - CONFIG: linux_aarch64_cuda_compiler_versionNonedoubleyesmpinompipython3.11.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: linux_aarch64_cuda_compiler_versionNoned_h9289cced
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-24.04-arm']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma8
           - CONFIG: linux_aarch64_cuda_compiler_versionNonedoubleyesmpinompipython3.12.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: linux_aarch64_cuda_compiler_versionNoned_h22da0a2d
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-24.04-arm']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma8
           - CONFIG: linux_aarch64_cuda_compiler_versionNonedoubleyesmpinompipython3.13.____cp313
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: linux_aarch64_cuda_compiler_versionNoned_h64da9c48
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-24.04-arm']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma8
           - CONFIG: linux_aarch64_cuda_compiler_versionNonedoubleyesmpiopenmpipython3.10.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: linux_aarch64_cuda_compiler_versionNoned_haceeee61
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-24.04-arm']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma8
           - CONFIG: linux_aarch64_cuda_compiler_versionNonedoubleyesmpiopenmpipython3.11.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: linux_aarch64_cuda_compiler_versionNoned_hbeb2e99c
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-24.04-arm']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma8
           - CONFIG: linux_aarch64_cuda_compiler_versionNonedoubleyesmpiopenmpipython3.12.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: linux_aarch64_cuda_compiler_versionNoned_hde0874d7
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-24.04-arm']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma8
           - CONFIG: linux_aarch64_cuda_compiler_versionNonedoubleyesmpiopenmpipython3.13.____cp313
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: linux_aarch64_cuda_compiler_versionNoned_hc014c68b
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-24.04-arm']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma8
           - CONFIG: osx_64_doublenompinompipython3.10.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: osx_64_doublenompinompipython3.10.____cpython
             UPLOAD_PACKAGES: True
             os: macos
             runs_on: ['macos-15-intel']
           - CONFIG: osx_64_doublenompinompipython3.11.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: osx_64_doublenompinompipython3.11.____cpython
             UPLOAD_PACKAGES: True
             os: macos
             runs_on: ['macos-15-intel']
           - CONFIG: osx_64_doublenompinompipython3.12.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: osx_64_doublenompinompipython3.12.____cpython
             UPLOAD_PACKAGES: True
             os: macos
             runs_on: ['macos-15-intel']
           - CONFIG: osx_64_doublenompinompipython3.13.____cp313
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: osx_64_doublenompinompipython3.13.____cp313
             UPLOAD_PACKAGES: True
             os: macos
             runs_on: ['macos-15-intel']
           - CONFIG: osx_64_doublenompiopenmpipython3.10.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: osx_64_doublenompiopenmpipython3.10.____cpython
             UPLOAD_PACKAGES: True
             os: macos
             runs_on: ['macos-15-intel']
           - CONFIG: osx_64_doublenompiopenmpipython3.11.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: osx_64_doublenompiopenmpipython3.11.____cpython
             UPLOAD_PACKAGES: True
             os: macos
             runs_on: ['macos-15-intel']
           - CONFIG: osx_64_doublenompiopenmpipython3.12.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: osx_64_doublenompiopenmpipython3.12.____cpython
             UPLOAD_PACKAGES: True
             os: macos
             runs_on: ['macos-15-intel']
           - CONFIG: osx_64_doublenompiopenmpipython3.13.____cp313
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: osx_64_doublenompiopenmpipython3.13.____cp313
             UPLOAD_PACKAGES: True
             os: macos
             runs_on: ['macos-15-intel']
           - CONFIG: osx_64_doubleyesmpinompipython3.10.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: osx_64_doubleyesmpinompipython3.10.____cpython
             UPLOAD_PACKAGES: True
             os: macos
             runs_on: ['macos-15-intel']
           - CONFIG: osx_64_doubleyesmpinompipython3.11.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: osx_64_doubleyesmpinompipython3.11.____cpython
             UPLOAD_PACKAGES: True
             os: macos
             runs_on: ['macos-15-intel']
           - CONFIG: osx_64_doubleyesmpinompipython3.12.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: osx_64_doubleyesmpinompipython3.12.____cpython
             UPLOAD_PACKAGES: True
             os: macos
             runs_on: ['macos-15-intel']
           - CONFIG: osx_64_doubleyesmpinompipython3.13.____cp313
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: osx_64_doubleyesmpinompipython3.13.____cp313
             UPLOAD_PACKAGES: True
             os: macos
             runs_on: ['macos-15-intel']
           - CONFIG: osx_64_doubleyesmpiopenmpipython3.10.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: osx_64_doubleyesmpiopenmpipython3.10.____cpython
             UPLOAD_PACKAGES: True
             os: macos
             runs_on: ['macos-15-intel']
           - CONFIG: osx_64_doubleyesmpiopenmpipython3.11.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: osx_64_doubleyesmpiopenmpipython3.11.____cpython
             UPLOAD_PACKAGES: True
             os: macos
             runs_on: ['macos-15-intel']
           - CONFIG: osx_64_doubleyesmpiopenmpipython3.12.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: osx_64_doubleyesmpiopenmpipython3.12.____cpython
             UPLOAD_PACKAGES: True
             os: macos
             runs_on: ['macos-15-intel']
           - CONFIG: osx_64_doubleyesmpiopenmpipython3.13.____cp313
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: osx_64_doubleyesmpiopenmpipython3.13.____cp313
             UPLOAD_PACKAGES: True
             os: macos
             runs_on: ['macos-15-intel']
           - CONFIG: osx_arm64_doublenompinompipython3.10.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: osx_arm64_doublenompinompipython3.10.____cpython
             UPLOAD_PACKAGES: True
             os: macos
             runs_on: ['macos-latest']
           - CONFIG: osx_arm64_doublenompinompipython3.11.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: osx_arm64_doublenompinompipython3.11.____cpython
             UPLOAD_PACKAGES: True
             os: macos
             runs_on: ['macos-latest']
           - CONFIG: osx_arm64_doublenompinompipython3.12.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: osx_arm64_doublenompinompipython3.12.____cpython
             UPLOAD_PACKAGES: True
             os: macos
             runs_on: ['macos-latest']
           - CONFIG: osx_arm64_doublenompinompipython3.13.____cp313
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: osx_arm64_doublenompinompipython3.13.____cp313
             UPLOAD_PACKAGES: True
             os: macos
             runs_on: ['macos-latest']
           - CONFIG: osx_arm64_doubleyesmpinompipython3.10.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: osx_arm64_doubleyesmpinompipython3.10.___hcfde9158
             UPLOAD_PACKAGES: True
             os: macos
             runs_on: ['macos-latest']
           - CONFIG: osx_arm64_doubleyesmpinompipython3.11.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: osx_arm64_doubleyesmpinompipython3.11.___h7302396f
             UPLOAD_PACKAGES: True
             os: macos
             runs_on: ['macos-latest']
           - CONFIG: osx_arm64_doubleyesmpinompipython3.12.____cpython
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: osx_arm64_doubleyesmpinompipython3.12.___h92c3b17a
             UPLOAD_PACKAGES: True
             os: macos
             runs_on: ['macos-latest']
           - CONFIG: osx_arm64_doubleyesmpinompipython3.13.____cp313
+            STORE_BUILD_ARTIFACTS: True
             SHORT_CONFIG: osx_arm64_doubleyesmpinompipython3.13.____cp313
             UPLOAD_PACKAGES: True
             os: macos
@@ -474,8 +539,8 @@ jobs:
       env:
         # default value; make it explicit, as it needs to match with artefact
         # generation below. Not configurable for now, can be revisited later
-        CONDA_BLD_DIR: C:\bld
-        MINIFORGE_HOME: D:\Miniforge
+        CONDA_BLD_PATH: C:\bld
+        MINIFORGE_HOME: ${{ contains(runner.arch, 'ARM') && 'C' || 'D' }}:\Miniforge
         PYTHONUNBUFFERED: 1
         CONFIG: ${{ matrix.CONFIG }}
         CI: github_actions
@@ -509,7 +574,7 @@ jobs:
       id: prepare-artifacts
       shell: bash
       # we do not want to trigger artefact creation if the build was cancelled
-      if: ${{ always() && steps.determine-status.outputs.status != 'cancelled' }}
+      if: ${{ always() && steps.determine-status.outputs.status != 'cancelled' && matrix.STORE_BUILD_ARTIFACTS }}
       env:
         CI: github_actions
         CONFIG: ${{ matrix.CONFIG }}
@@ -521,15 +586,15 @@ jobs:
         export FEEDSTOCK_NAME="$(basename $GITHUB_REPOSITORY)"
         export ARTIFACT_STAGING_DIR="$GITHUB_WORKSPACE"
         if [ $OS == "macos" ]; then
-          export CONDA_BLD_DIR="${MINIFORGE_HOME:-${HOME}/miniforge3}/conda-bld"
+          export CONDA_BLD_PATH="${MINIFORGE_HOME:-${HOME}/miniforge3}/conda-bld"
         elif [ $OS == "windows" ]; then
           # this needs to be consistent with build step, see above
-          export CONDA_BLD_DIR="C:\\bld"
+          export CONDA_BLD_PATH="C:\\bld"
         else
-          export CONDA_BLD_DIR="build_artifacts"
+          export CONDA_BLD_PATH="build_artifacts"
         fi
-        # Archive everything in CONDA_BLD_DIR except environments
-        # Archive the CONDA_BLD_DIR environments only when the job fails
+        # Archive everything in CONDA_BLD_PATH except environments
+        # Archive the CONDA_BLD_PATH environments only when the job fails
         # Use different prefix for successful and failed build artifacts
         # so random failures don't prevent rebuilds from creating artifacts.
         if [ $JOB_STATUS == "failure" ]; then
@@ -545,7 +610,7 @@ jobs:
         fi
 
     - name: Store conda build artifacts
-      uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
+      uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
       if: ${{ always() && steps.prepare-artifacts.outcome == 'success' }}
       with:
         name: ${{ steps.prepare-artifacts.outputs.BLD_ARTIFACT_NAME }}
@@ -554,7 +619,7 @@ jobs:
       continue-on-error: true
 
     - name: Store conda build environment artifacts
-      uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
+      uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
       # only relevant if build failed, see above
       if: ${{ always() && steps.determine-status.outputs.status == 'failure' && steps.prepare-artifacts.outcome == 'success' }}
       with:
