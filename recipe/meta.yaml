@@ -9,7 +9,7 @@
 # Use a higher build number for preferred variants, to ensure that they are
 # picked first by conda's solver, and installed where the platform supports it.
 # Prefer: CUDA > non-CUDA, MPI > nompi, single > double
-{% set build = 1 %}
+{% set build = 2 %}
 {% set build = build + 100 %}  # [double == 'no' and cuda_compiler_version != "None"]
 {% set build = build + 50 %}   # [mpi != 'nompi']
 
@@ -75,7 +75,7 @@ requirements:
     - libmetatomic-torch >=0.1.12rc1,<0.1.12
     # always build against the CPU version of libtorch, we can still pick the
     # cuda one at runtime
-    - libtorch * cpu*
+    - libtorch * cpu_generic*
     - libtorch
   run:
     - python
